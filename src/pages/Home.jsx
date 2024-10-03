@@ -1,8 +1,15 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Placeholder from '../assets/placeholder.svg'
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
 function Home() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleButtonClick = () => {
+    navigate('/info');
+  };
   return (
     <div class='grid grid-rows-4 mt-0 items-center space-y-20'>
         <div>
@@ -16,7 +23,7 @@ function Home() {
                 Our innovative Augmented Reality (AR) Banner solution is here to help you captivate potential customers 
                 and showcase your unique travel experiences like never before.
             </h4>
-            <Button>See More</Button>
+            <Button onClick={handleButtonClick}>See More</Button>
         </div>
         <div className='flex flex-col items-center justify-center text-center'>
                 <h1>What are AR Banners?</h1>

@@ -31,7 +31,7 @@ export default function Header() {
               {links.map((link, index) => {
                 return (
                   <Link to={`${routes[index]}`}>
-                    <Button variant='ghost'>
+                    <Button variant='ghost'className="hover:text-violet-600">
                       {icons[index]}
                       {link}
                     </Button>

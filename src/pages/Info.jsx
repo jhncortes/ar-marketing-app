@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Placeholder from '../assets/placeholder.svg';
-
+import { useNavigate } from 'react-router-dom';
 // function Info() {
 //   return (
 //     <div className="mt-12">
@@ -33,11 +33,16 @@ import Placeholder from '../assets/placeholder.svg';
 
 
 function Info() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleBookingClick = () => {
+    navigate('/booking'); // Navigate to the booking page
+  };
   return (
     <div className='max-w-3xl mx-auto px-4 py-12'>
       <div className='text-center mb-10'>
-        <h1 className='text-4xl font-bold text-violet-600'>Our Advanced AI Solutions</h1>
-        <h2 className='text-2xl mt-4 text-gray-700'>Transforming Customer Engagement with Intelligent Virtual Concierges</h2>
+        <h1 className='text-4xl font-bold text-violet-600'>Our Groundbreaking Solution</h1>
+        <h2 className='text-2xl mt-4 text-gray-700'>Wicked XR Banners goes beyond simple chatbots. We offer virtual staff members with deep, customizable knowledge:</h2>
       </div>
       
       <div className='space-y-12'>
@@ -90,6 +95,20 @@ function Info() {
             <li><b>Regular AI Updates:</b> Benefit from ongoing improvements to our underlying AI technology.</li>
           </ul>
         </div>
+      </div>
+      <div className='text-center mt-12 bg-gray-100 p-6 rounded-lg shadow-md'>
+        <h2 className='text-2xl font-bold'>Embark on Your AI-Powered Customer Service Journey</h2>
+        <p className='mt-4'>
+          Don't miss the opportunity to lead the revolution in intelligent, personalised customer service. 
+          With Wicked XR Banners, you can offer an unparalleled level of assistance and engagement.
+        </p>
+        <p className='mt-2'>
+          Take the first step towards transforming your space with knowledgeable, always-available virtual staff. 
+          Schedule your free 15-minute consultation today and discover how Wicked XR Banners can elevate your customer service to extraordinary new heights.
+        </p>
+        <Button onClick={handleBookingClick} className='mt-6 bg-violet-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-violet-700'>
+          Book Your Free Consultation Now
+        </Button>
       </div>
     </div>
   );
